@@ -1,0 +1,17 @@
+//Start the zookeeper server
+zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties
+
+//Start the kafka Server
+kafka-server-start /usr/local/etc/kafka/server.properties
+
+// Start the producer console
+kafka-console-producer --broker-list localhost:9092 --topic test2
+
+
+Issues with port number:
+
+lsof -i :<Port Number>
+
+lsof -i :9092
+
+kill -9 <port number>
